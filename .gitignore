@@ -1,0 +1,9 @@
+.DS_Store
+.rebar
+.eunit
+deps
+ebin
+dump.rdb
+erl_crash.dump
+build-redis/.vagrant
+build-redis/build

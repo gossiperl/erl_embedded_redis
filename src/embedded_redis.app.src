@@ -1,0 +1,7 @@
+{application, embedded_redis,
+  [{description, "Erlang Embedded Redis"},
+  {vsn, "3.0.2"},
+  {modules, [ redis, redis_config, redis_server ]},
+  {registered, redis},
+  {applications, [kernel, stdlib]},
+  {mod, {gossiperl_app, []}}]}.
