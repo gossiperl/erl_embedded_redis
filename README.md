@@ -1,6 +1,6 @@
 # Embedded Redis server for Erlang
 
-Start Redis as an Erlang application. Project inspired by (kstyrc/embedded-redis)[https://github.com/kstyrc/embedded-redis].
+Start Redis as an Erlang application. Project inspired by [kstyrc/embedded-redis](https://github.com/kstyrc/embedded-redis).
 
 # Using in your project
 
@@ -45,13 +45,13 @@ If you already have a `redis.conf` file which you would like to use, do the foll
 
 `erl_embedded_redis` comes with a 64bit binaries of Redis for OS X and Linux. The binaries are in `priv` directory.
 
-Issuing `redis:start_link(server)` opens an Erlang port, then an (eredis)[https://github.com/wooga/eredis] client is created.
+Issuing `redis:start_link(server)` opens an Erlang port, then an [eredis](https://github.com/wooga/eredis) client is created.
 
 This client is used for all communication with the server and is also responsible for issuing `shutdown` command to Redis when `redis:stor(server, Pid)` is called.
 
 The client will use a `hd(value)` of `<<"bind">>`, value of `<<"port">>` and value of `<<"requirepass">>` properties. The defaults (if not specified) are `"127.0.0.1"`, `6379` and `""` respecitely.
 
-Every call to `redis:start_link(...)` will create a temp directory in the `priv` folder. A new `redis.conf` will be placed in there and the server will use that copy of the configuration. Issuing `redis:stop(server, ...)` will result in the temp folder being removed. Temporary configuration is a result of merge of the default `redis.conf` and given startup configuration where keys from given configuration take priority over defaults.
+Every call to `redis:start_link(server)` will create a temp directory in the `priv` folder. A new `redis.conf` will be placed in there and the server will use that copy of the configuration. Issuing `redis:stop(server, ...)` will result in the temp folder being removed. Temporary configuration is a result of merge of the default `redis.conf` and given startup configuration where keys from given configuration take priority over defaults.
 
 Windows is currently not supported and ARM not tested (most likely a separate redis build for ARM is required).
 
