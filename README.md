@@ -8,7 +8,7 @@ Start Redis as an Erlang application. Project inspired by [kstyrc/embedded-redis
 
     {deps, [
       {erl_embedded_redis, ".*",
-        {git, "https://github.com/gossiperl/erl_embedded_redis.git", {tag, "3.0.2"}}}
+        {git, "https://github.com/gossiperl/erl_embedded_redis.git", {tag, "3.0.3"}}}
     ]}.
 
     rebar get-deps compile
